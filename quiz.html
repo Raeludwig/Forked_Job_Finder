@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developer | Job Finder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+<body>
+    <header class="quiz_header"> 
+        <h1>Developer Quiz</h1>
+    </header>
+
+    <div class="quiz-container">
+        <div class="quiz-questions">
+            <h1 id="display-questions"></h1>
+        </div>
+
+        <div class="option-container">
+            <div class="modal-container" id="option-modal">
+                <div class="content-container">
+                    <h3>Please Pick An Option</h3>
+                </div>
+            </div>
+            
+            <span>
+                <input type="radio" id="option-one" name="option" class="radio" value="optionA"/>
+                <label for="option-one" class="option" id="option-one-label"></label>
+            </span>
+
+            <span>
+                <input type="radio" id="option-two" name="option" class="radio" value="optionB"/>
+                <label for="option-two" class="option" id="option-two-label"></label>
+            </span>
+
+            <span>
+                <input type="radio" id="option-three" name="option" class="radio" value="optionC"/>
+                <label for="option-three" class="option" id="option-three-label"></label>
+            </span>
+
+            <span>
+                <input type="radio" id="option-four" name="option" class="radio" value="optionD"/>
+                <label for="option-four" class="option" id="option-four-label"></label>
+            </span>
+        </div>
+
+        <div class="button-container">
+        <button onclick="handlePreviousQuestion()">Previous Question</button>
+        <button onclick="handleNextQuestion()">Next Question</button>
+        </div>
+    </div>
+    <div id="results"></div>
+</body>
+
+</html>
