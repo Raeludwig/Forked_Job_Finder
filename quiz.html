@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
 <body>
-    <header class="quiz_header"> 
-        <h1>Developer Quiz</h1>
-    </header>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <p class="title">Developer Quiz</p>
+            <p class="subtitle">Where does your path lead?</p>
+        </div>
+    </section>
 
-    <div class="quiz-container">
+    <span class="quiz-container has-text-centered">
         <div class="quiz-questions">
-            <h1 id="display-questions"></h1>
+            <h1 id="display-questions">Questions go here</h1>
         </div>
 
         <div class="option-container">
@@ -24,32 +27,44 @@
                 </div>
             </div>
             
-            <span>
-                <input type="radio" id="option-one" name="option" class="radio" value="optionA"/>
-                <label for="option-one" class="option" id="option-one-label"></label>
-            </span>
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-8">
+                    <div class="tile">
+                        <div class="tile is-parent is-vertical">
+                            <span class="level-item has-text-centered"> 
+                                <input type="radio" id="option-one" name="option" class="radio" value="optionA"/>
+                                <label for="option-one" class="option" id="option-one-label"></label>
+                                Option1
+                            </span>
 
-            <span>
-                <input type="radio" id="option-two" name="option" class="radio" value="optionB"/>
-                <label for="option-two" class="option" id="option-two-label"></label>
-            </span>
+                            <span class="level-item has-text-centered"> 
+                                <input type="radio" id="option-two" name="option" class="radio" value="optionB"/>
+                                <label for="option-two" class="option" id="option-two-label"></label>
+                                Option2
+                            </span>
 
-            <span>
-                <input type="radio" id="option-three" name="option" class="radio" value="optionC"/>
-                <label for="option-three" class="option" id="option-three-label"></label>
-            </span>
+                            <span class="level-item has-text-centered">
+                                <input type="radio" id="option-three" name="option" class="radio" value="optionC"/>
+                                <label for="option-three" class="option" id="option-three-label"></label>
+                                Option3
+                            </span>
 
-            <span>
-                <input type="radio" id="option-four" name="option" class="radio" value="optionD"/>
-                <label for="option-four" class="option" id="option-four-label"></label>
-            </span>
+                            <span class="level-item has-text-centered">
+                                <input type="radio" id="option-four" name="option" class="radio" value="optionD"/>
+                                <label for="option-four" class="option" id="option-four-label"></label>
+                                Option4
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="button-container">
-        <button onclick="handlePreviousQuestion()">Previous Question</button>
-        <button onclick="handleNextQuestion()">Next Question</button>
+        <button class="button is-primary is-small">Previous Question</button>
+        <button class="button is-primary is-small">Next Question</button>
         </div>
-    </div>
+    </span>
     <div id="results"></div>
     <script src="/assets/js/script.js"></script>
 </body>
