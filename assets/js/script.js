@@ -26,3 +26,28 @@
     .then(function(data) {
       console.log(data);
     })
+
+//testing fetch call using position title
+function getJobListing (title) {
+  var listingURL = "https://data.usajobs.gov/api/Search?PositionTitle=" + title;
+
+  fetch(listingURL, {
+    headers: {          
+      "Host": host,          
+      "User-Agent": userAgent,          
+      "Authorization-Key": authKey      
+  } 
+  })
+    .then(function(response) {
+      if (response.ok) {
+          response.json().then(function(data) {
+            console.log(data);
+          });
+      };
+    });
+}
+
+//title variable will need to grab from survey results
+//this is just temporary :)
+var title = "cybersecurity"
+getJobListing(title)
