@@ -3,8 +3,8 @@ var endTime;
 const timeSpan = document.getElementById('time-remaining');
 var timeInterval;
 var highScores = [];
-const quizName= document.getElementById('quizName');
-const quizRules= document.getElementById('quizRules');
+const quizName = document.getElementById('quizName');
+const quizRules = document.getElementById('quizRules');
 
 
 var questions = [
@@ -16,38 +16,108 @@ var questions = [
             "How fun it is",
             "Aestetics"
         ],
-        
+
     },
     {
         question: "What is your favorite school subject?",
         options: [
-            "Art",
-            "Math",
             "Computers",
-            "Physics"
+            "Math",
+            "Physics",
+            "Art"
         ],
-      
+
     },
     {
         question: "Your friends always come to you for advice on ...",
         options: [
+            "Self defense ideas",
             "Getting their gadgets working",
-            "Making things look good",
             "What video games are the best",
-            "Self defense ideas"
+            "Making things look good"
         ],
-   
+
     },
     {
         question: "I prefer to...",
         options: [
-            "Create things",
+            "Research hacking techniques",
             "Work out puzzles",
             "Live in a world of my own creation",
-            "Research hacking techniques"
+            "Create things"
         ],
-       
-    }
+
+    },
+    {
+        question: "My friends would describe me as...",
+        options: [
+            "Protective",
+            "Analytical",
+            "Imaginative",
+            "Creative"
+        ],
+
+    },
+    {
+        question: "When people come over for a party you will find me...",
+        options: [
+            "Keeping an eye out for party crashers",
+            "In the kitchen making sure that eveything is being done correctly",
+            "Telling stories to everyone I talk to",
+            "At the door, greeting all the guests"
+        ],
+
+    },
+    {
+        question: "What's the most important feature of a website??",
+        options: [
+            "Security",
+            "Functionality",
+            "How fun it is",
+            "Aestetics"
+        ],
+
+    },
+    {
+        question: "What is most important?",
+        options: [
+            "User safety",
+            "Functionality over decoration",
+            "The experience",
+            "The way things look"
+        ],
+
+    },
+    {
+        question: "I am really good with...",
+        options: [
+            "Python",
+            "Ruby",
+            "C++",
+            "CSS"
+        ],
+
+    },
+    {
+        question: "The most important part of my job is..",
+        options: [
+            "How much they pay me. A LOT!",
+            "Making sure everything is functioning",
+            "Creating a believable experience",
+            "Choosing what color palette I will use"
+        ],
+
+    },
+    {
+        question: "If I had to pick a show I would pick...",
+        options: [
+            "Criminal Minds",
+            "A Beautiful Mind",
+            "Game of Thrones",
+            "La La Land"
+        ],
+
+    },
 ]
 var questionIndex = -1;
 
@@ -59,19 +129,20 @@ startButton.addEventListener('click', () => {
     // Show the first question
 
     //hide questions until clicked
-    option1El.style.display ="";
-    option2El.style.display ="";
-    option3El.style.display ="";
-    option4El.style.display ="";
-    option5El.style.display ="";
-    option6El.style.display ="";
-    option7El.style.display ="";
-    option8El.style.display ="";
-    option9El.style.display ="";
-    option10El.style.display ="";
+    option1El.style.display = "";
+    option2El.style.display = "";
+    option3El.style.display = "";
+    option4El.style.display = "";
+    // option5El.style.display = "";
+    // option6El.style.display = "";
+    // option7El.style.display = "";
+    // option8El.style.display = "";
+    // option9El.style.display = "";
+    // option10El.style.display = "";
+
     // hide starting info
     quizName.style.display = "none";
-quizRules.style.display = "none";
+    quizRules.style.display = "none";
 
 });
 
@@ -154,7 +225,7 @@ function submitAnswer(answer) {
     // if (answer !== currentQuestion.answer) {
     //     console.log("Incorrect!");
     //     endTime= new Date (endTime.getTime() - 10000)
-        
+
     // }
 
     showNextQuestion();
@@ -196,34 +267,34 @@ submitBtn.addEventListener("click", function () {
     console.log("working", highScores);
 });
 
-const highScoreBtn= document.getElementById('high-score-btn');
+const highScoreBtn = document.getElementById('high-score-btn');
 highScoreBtn.addEventListener("click", showHighScore);
 
 function showHighScore() {
     hideQuestions();
     finishScreen.style.display = "none";
     highScoreEnd.style.display = "";
-    startButton.style.display= "none";
+    startButton.style.display = "none";
     highScoreEnd.innerHTML = "";
     highScores.forEach((item) => {
-var container = document.createElement("div");
-container.textContent= item.initials + ":" + item.score;
-highScoreEnd.appendChild(container);
-quizName.style.display = "none";
-quizRules.style.display = "none";
-// hide starting info
+        var container = document.createElement("div");
+        container.textContent = item.initials + ":" + item.score;
+        highScoreEnd.appendChild(container);
+        quizName.style.display = "none";
+        quizRules.style.display = "none";
+        // hide starting info
     })
 }
 
-function loadHighScores (){
+function loadHighScores() {
     var scores = localStorage.getItem("High Scores");
-    if (scores != null){
-        highScores=JSON.parse(scores)
-    } 
+    if (scores != null) {
+        highScores = JSON.parse(scores)
+    }
     console.log("high scores", highScores);
 }
 
-function saveHighScores (){
+function saveHighScores() {
     localStorage.setItem("High Scores", JSON.stringify(highScores));
 
 }
