@@ -63,11 +63,12 @@ startButton.addEventListener('click', () => {
     option2El.style.display ="";
     option3El.style.display ="";
     option4El.style.display ="";
-
-
-
-
-
+    option5El.style.display ="";
+    option6El.style.display ="";
+    option7El.style.display ="";
+    option8El.style.display ="";
+    option9El.style.display ="";
+    option10El.style.display ="";
     // hide starting info
     quizName.style.display = "none";
 quizRules.style.display = "none";
@@ -80,6 +81,13 @@ const option1El = document.getElementById('option1');
 const option2El = document.getElementById('option2');
 const option3El = document.getElementById('option3');
 const option4El = document.getElementById('option4');
+// const option5El = document.getElementById('option5');
+// const option6El = document.getElementById('option6');
+// const option7El = document.getElementById('option7');
+// const option8El = document.getElementById('option8');
+// const option9El = document.getElementById('option9');
+// const option10El = document.getElementById('option10');
+
 
 option1El.addEventListener('click', (e) => {
     submitAnswer(e.target.textContent);
@@ -128,12 +136,12 @@ function showNextQuestion() {
     option2El.textContent = currentQuestion.options[1];
     option3El.textContent = currentQuestion.options[2];
     option4El.textContent = currentQuestion.options[3];
-    option5El.textContent = currentQuestion.options[4];
-    option6El.textContent = currentQuestion.options[5];
-    option7El.textContent = currentQuestion.options[6];
-    option8El.textContent = currentQuestion.options[7];
-    option9El.textContent = currentQuestion.options[8];
-    option10El.textContent = currentQuestion.options[];
+    // option5El.textContent = currentQuestion.options[4];
+    // option6El.textContent = currentQuestion.options[5];
+    // option7El.textContent = currentQuestion.options[6];
+    // option8El.textContent = currentQuestion.options[7];
+    // option9El.textContent = currentQuestion.options[8];
+    // option10El.textContent = currentQuestion.options[9];
 
 
 
