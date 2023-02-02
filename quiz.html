@@ -23,17 +23,20 @@
     <span class="quiz-container has-text-centered">
         <!--Displays the question one by one-->
         <div class="quiz-questions">
-            <h1 id="display-questions">Questions go here</h1>
+            <h1 id="question"></h1>
         </div>
         <!--Options are displayed-->
         <div class="option-container">
             <div class="modal-container" id="option-modal">
                 <div class="content-container">
-                    <h3>Please Pick An Option</h3>
+                    <h4 id="option1" style="display: none;"></h4>
+                    <h4 id="option2" style="display: none;"></h4>
+                    <h4 id="option3" style="display: none;"></h4>
+                    <h4 id="option4" style="display: none;"></h4>
                 </div>
             </div>
             
-            <!--Styling and content of the options-->
+            <!--Styling and content of the options
             <div class="tile is-ancestor">
                 <div class="tile is-vertical is-8">
                     <div class="tile">
@@ -64,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <!--These buttons allow the user to move onto the next question or to change their answer on a previous one-->
