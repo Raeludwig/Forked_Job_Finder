@@ -17,60 +17,31 @@
     </section>
     
     <!--when button is pressed, quiz starts-->
-    <button class="button is-info is-small" id="start">Start</button>
-
+    <div class="level mt-6">
+        <div class="level-item has-text-centered">
+            <p class="button">
+                <button class="button is-info is-large" id="start">Start</button>
+            </p>
+        </div>
+    </div>
     <!--This section is for the question and answer-->
-    <span class="quiz-container has-text-centered">
+    <span class="quiz-container has-text-centered is-family-code">
         <!--Displays the question one by one-->
-        <div class="quiz-questions">
-            <h1 id="question"></h1>
+        <div class="quiz-questions is-large my-2">
+            <h1 class="content box is-large mt-2 is-uppercase" id="question"></h1>
         </div>
         <!--Options are displayed-->
         <div class="option-container">
             <div class="modal-container" id="option-modal">
-                <div class="content-container">
-                    <button id="option1" style="display: none;"></button>
-                    <button id="option2" style="display: none;"></button>
-                    <button id="option3" style="display: none;"></button>
-                    <button id="option4" style="display: none;"></button>
-                </div>
-            </div>
-            
-            <!--Styling and content of the options
-            <div class="tile is-ancestor">
-                <div class="tile is-vertical is-8">
-                    <div class="tile">
-                        <div class="tile is-parent is-vertical">
-                            <span class="level-item has-text-centered"> 
-                                <input type="radio" id="option1" name="option" class="radio" value="option1"/>
-                                <label for="option1" class="option" id="option-one-label"></label>
-                                Option1
-                            </span>
-                            <span class="level-item has-text-centered"> 
-                                <input type="radio" id="option2" name="option" class="radio" value="option2"/>
-                                <label for="option2" class="option" id="option-two-label"></label>
-                                Option2
-                            </span>
-                            <span class="level-item has-text-centered">
-                                <input type="radio" id="option3" name="option" class="radio" value="option3"/>
-                                <label for="option3" class="option" id="option-three-label"></label>
-                                Option3
-                            </span>
-                            <span class="level-item has-text-centered">
-                                <input type="radio" id="option4" name="option" class="radio" value="option4"/>
-                                <label for="option4" class="option" id="option-four-label"></label>
-                                Option4
-                            </span>
-                        </div>
+                <div  class="content-container">
+                    <div class="buttons are-medium">
+                        <button class="button is-danger is-light is-fullwidth" id="option1" style="display: none;"></button>
+                        <button class="button is-success is-light is-fullwidth" id="option2" style="display: none;"></button>
+                        <button class="button is-info is-light is-fullwidth" id="option3" style="display: none;"></button>
+                        <button class="button is-warning is-light is-fullwidth" id="option4" style="display: none;"></button>
                     </div>
                 </div>
-            </div>-->
-        </div>
-
-        <!--These buttons allow the user to move onto the next question or to change their answer on a previous one-->
-        <div class="button-container">
-        <button class="button is-primary is-small">Previous Question</button>
-        <button class="button is-primary is-small">Next Question</button>
+            </div>
         </div>
     </span>
 
