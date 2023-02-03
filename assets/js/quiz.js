@@ -189,7 +189,7 @@ function showNextQuestion() {
         chosenRole = roles[chosenRoleIndex];
         localStorage.setItem('Chosen Role', chosenRole);
         console.log("Chosen role: " + chosenRole);
-        showFinishScreen();
+        document.location.replace('./results.html');
         return;
     }
 
