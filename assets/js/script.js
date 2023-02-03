@@ -72,5 +72,5 @@ function getJobListing (title) {
 
 //title variable will need to grab from survey results
 //this is just temporary :)
-var title = "cybersecurity"
+var title = localStorage.getItem('Chosen Role');
 getJobListing(title)
