@@ -75,6 +75,7 @@ function getJobListing (title) {
 var title = localStorage.getItem('Chosen Role');
 getJobListing(title)
 wikiSearch(title)
+jobDescription(title)
 
 // Searches Wikipedia for the given search query and returns 5 article titles, URLs, and snippets
 function wikiSearch(search) {
@@ -111,6 +112,20 @@ function wikiSearch(search) {
 }
 
 
+
+//populating the results
+
+var nameLocation =document.querySelector('#name-location');
+
+function jobDescription() {
+  nameLocation.innerHTML=""
+  var titleInsert= document.createElement('h3')
+  titleInsert.textContent =('Chosen Role')
+  
+  card.setAttribute("class", "card")
+  nameLocation.appendChild(card)
+card.append(titleInsert)
+}
 
   // async function searchWikipedia(searchQuery) {
   //   const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
