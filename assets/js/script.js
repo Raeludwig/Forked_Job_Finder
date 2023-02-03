@@ -74,3 +74,50 @@ function getJobListing (title) {
 //this is just temporary :)
 var title = localStorage.getItem('Chosen Role');
 getJobListing(title)
+wikiSearch(title)
+
+// Searches Wikipedia for the given search query and returns 5 article titles, URLs, and snippets
+function wikiSearch(search) {
+  fetch('https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=5&srsearch=' + search) 
+  
+  .then(function(response) {
+    if (response.ok) {
+      return response.json()
+      .then(function(data) {
+        console.log(data);
+        var pageURLs = [];
+        var pageTitles = [];
+        var pageSnippets = [];
+        for (var i = 0; i < 5; i++) {
+          pageURLs[i] = "https://en.wikipedia.org/?curid=" + data.query.search[i].pageid;
+          pageTitles[i] = data.query.search[i].title;
+          pageSnippets[i] = data.query.search[i].snippet;
+
+        }
+        console.log(pageURLs);
+        console.log(pageTitles)
+        console.log(pageSnippets)
+
+        // Set data into page UI
+        for (var i = 1; i <= 5; i++) {
+          $("#info" + i).text(pageSnippets[i - 1]);
+          $("#title" + i).text(pageTitles[i - 1]);
+          $("#URL" + i).text(pageURLs[i - 1]);
+        }
+      })
+    }
+  })
+  
+}
+
+
+
+  // async function searchWikipedia(searchQuery) {
+  //   const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
+  //   const response = await fetch(endpoint);
+  //   if (!response.ok) {
+  //     throw Error(response.statusText);
+  //   }
+  //   const json = await response.json();
+  //   return json;
+  // }
