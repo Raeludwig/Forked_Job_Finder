@@ -9,7 +9,7 @@ const quizRules = document.getElementById('quizRules');
 // Tally section
 
 var tally = [0, 0, 0, 0];
-var roles = ['Cybersecurity', 'Back-End Dev', 'Game Dev', 'Front-End Dev'];
+var roles = ['Cybersecurity', 'Back%20End%20Developer', 'Game%20Developer', 'Front%20End%20Developer'];
 var chosenRole;
 
 var questions = [
@@ -189,7 +189,7 @@ function showNextQuestion() {
         chosenRole = roles[chosenRoleIndex];
         localStorage.setItem('Chosen Role', chosenRole);
         console.log("Chosen role: " + chosenRole);
-        showFinishScreen();
+        document.location.replace('./results.html');
         return;
     }
 
