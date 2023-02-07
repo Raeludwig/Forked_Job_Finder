@@ -2,12 +2,10 @@ const startButton = document.getElementById('start')
 var endTime;
 const timeSpan = document.getElementById('time-remaining');
 var timeInterval;
-var highScores = [];
 const quizName = document.getElementById('quizName');
 const quizRules = document.getElementById('quizRules');
 const start=document.getElementById('start-button')
 // Tally section
-
 var tally = [0, 0, 0, 0];
 var roles = ['Cybersecurity', 'Back%20End%20Developer', 'Game%20Developer', 'Front%20End%20Developer'];
 var chosenRole;
@@ -233,53 +231,3 @@ function hideQuestions() {
     option4El.style.display = "none";
 
 }
-function showFinishScreen() {
-    hideQuestions();
-    finishScreen.style.display = "";
-}
-
-submitBtn.addEventListener("click", function () {
-    highScores.push({
-        initials: initialInput.value,
-        score: timeSpan.textContent || "0"
-
-    }
-    );
-    showHighScore();
-    saveHighScores();
-    console.log("working", highScores);
-});
-
-// const highScoreBtn = document.getElementById('high-score-btn');
-// highScoreBtn.addEventListener("click", showHighScore);
-
-function showHighScore() {
-    hideQuestions();
-    finishScreen.style.display = "none";
-    highScoreEnd.style.display = "";
-    startButton.style.display = "none";
-    highScoreEnd.innerHTML = "";
-    highScores.forEach((item) => {
-        var container = document.createElement("div");
-        container.textContent = item.initials + ":" + item.score;
-        highScoreEnd.appendChild(container);
-        quizName.style.display = "none";
-        quizRules.style.display = "none";
-        // hide starting info
-    })
-}
-
-function loadHighScores() {
-    var scores = localStorage.getItem("High Scores");
-    if (scores != null) {
-        highScores = JSON.parse(scores)
-    }
-    console.log("high scores", highScores);
-}
-
-function saveHighScores() {
-    localStorage.setItem("High Scores", JSON.stringify(highScores));
-
-}
-
-loadHighScores();

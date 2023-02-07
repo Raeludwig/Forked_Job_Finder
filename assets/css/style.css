@@ -7,4 +7,16 @@
 
 body {
     background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: min-content;
+    width: min-content;
+}
+
+footer {
+    margin-top: auto;
 }
