@@ -5,7 +5,7 @@ var timeInterval;
 var highScores = [];
 const quizName = document.getElementById('quizName');
 const quizRules = document.getElementById('quizRules');
-
+const start=document.getElementById('start-button')
 // Tally section
 
 var tally = [0, 0, 0, 0];
@@ -129,6 +129,7 @@ var questionIndex = -1;
 startButton.addEventListener('click', () => {
     // Hide the start button
     startButton.style.display = "none";
+    start.style.display="none"
     // set current question to 0
     showNextQuestion();
     // Show the first question
