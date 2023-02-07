@@ -73,6 +73,7 @@ function wikiSearch(search) {
           $("#info" + i).text(pageSnippets[i - 1]);
           $("#title" + i).text(pageTitles[i - 1]);
           $("#URL" + i).text(pageURLs[i - 1]);
+          $("#URL" + i).attr("href", pageURLs[i - 1]);
         }
       })
     }
