@@ -17,7 +17,7 @@ var questions = [
             "Security",
             "Functionality",
             "How fun it is",
-            "Aestetics"
+            "Aesthetics"
         ],
 
     },
@@ -68,16 +68,6 @@ var questions = [
             "In the kitchen making sure that eveything is being done correctly",
             "Telling stories to everyone I talk to",
             "At the door, greeting all the guests"
-        ],
-
-    },
-    {
-        question: "What's the most important feature of a website??",
-        options: [
-            "Security",
-            "Functionality",
-            "How fun it is",
-            "Aestetics"
         ],
 
     },
