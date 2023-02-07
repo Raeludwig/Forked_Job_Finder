@@ -86,15 +86,17 @@ var nameLocation = document.querySelector('#name-location');
 
 function jobDescription() {
   var jobName;
-  if (title = "Back%20End%20Developer") {
+  console.log(title)
+  if (title === "Back%20End%20Developer") {
     jobName = "Back End Developer";
-  } else if (title = "Game%20Developer") {
+  } else if (title === "Game%20Developer") {
     jobName = "Game Developer";
-  } else if (title = "Front%20End%20Developer") {
+  } else if (title === "Front%20End%20Developer") {
     jobName = "Front End Developer";
   } else {
     jobName = title;
   }
+  console.log("jobName: " + jobName)
   nameLocation.innerHTML = jobName;
   var titleInsert= document.createElement('h3');
 }
