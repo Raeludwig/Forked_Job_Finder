@@ -54,6 +54,7 @@ This software uses the following open source packages:
 - [USA Jobs API](https://developer.usajobs.gov/)
 - [Wikipedia API](https://en.wikipedia.org/api/rest_v1/)
 - [Amitmerchant.com](https://www.amitmerchant.com) 
+- [Giphy.com](https://giphy.com/stickers/pug-puglie-IeeYk6c3eMobX1d7CS) 
 
 ## License
 
