@@ -27,8 +27,8 @@ function getJobListing (title) {
             for (i = 0; i < 10; i++) {
                // Variable to push information into html
               var listingInfo = $( 
-                '<div class="tile is-child box">' +
-                  '<h4 class="title is-4">Job Title: ' + data.SearchResult.SearchResultItems[i].MatchedObjectDescriptor.PositionTitle + '</h4>' +
+                '<div class="tile is-child box has-background-black">' +
+                  '<h4 class="title is-4" style="color: lime;">Job Title: ' + data.SearchResult.SearchResultItems[i].MatchedObjectDescriptor.PositionTitle + '</h4>' +
                   '<h6 class="subtitle is-6">Department: ' + data.SearchResult.SearchResultItems[i].MatchedObjectDescriptor.DepartmentName + '</h6>' +
                   '<h6 class="subtitle is-6">Organization: ' + data.SearchResult.SearchResultItems[i].MatchedObjectDescriptor.OrganizationName + '</h6>' +
                   '<p>Position Start Date: ' + data.SearchResult.SearchResultItems[i].MatchedObjectDescriptor.PositionStartDate + '</p>' +
@@ -57,20 +57,17 @@ function wikiSearch(search) {
         console.log(data);
         var pageURLs = [];
         var pageTitles = [];
-        var pageSnippets = [];
         for (var i = 0; i < 5; i++) {
           pageURLs[i] = "https://en.wikipedia.org/?curid=" + data.query.search[i].pageid;
           pageTitles[i] = data.query.search[i].title;
-          pageSnippets[i] = data.query.search[i].snippet;
 
         }
         console.log(pageURLs);
         console.log(pageTitles);
-        console.log(pageSnippets);
+        console.log(data)
 
         // Set data into page UI
         for (var i = 1; i <= 5; i++) {
-          $("#info" + i).text(pageSnippets[i - 1]);
           $("#title" + i).text(pageTitles[i - 1]);
           $("#URL" + i).text(pageURLs[i - 1]);
           $("#URL" + i).attr("href", pageURLs[i - 1]);
