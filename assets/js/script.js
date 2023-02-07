@@ -65,8 +65,8 @@ function wikiSearch(search) {
 
         }
         console.log(pageURLs);
-        console.log(pageTitles)
-        console.log(pageSnippets)
+        console.log(pageTitles);
+        console.log(pageSnippets);
 
         // Set data into page UI
         for (var i = 1; i <= 5; i++) {
@@ -80,9 +80,25 @@ function wikiSearch(search) {
   
 }
 
-// Calls the getJobListing() and wikiSearch() method to fetch data and show data on the results page
+// Populating the results
+
+var nameLocation = document.querySelector('#name-location');
+
+function jobDescription() {
+  nameLocation.innerHTML=""
+  var titleInsert= document.createElement('h3')
+  titleInsert.textContent =('Chosen Role')
+  
+  card.setAttribute("class", "card")
+  nameLocation.appendChild(card)
+  card.append(titleInsert)
+}
+
+// Calls the getJobListing(), wikiSearch(), and jobDescription() method to fetch data and show data on the results page
 getJobListing(title);
 wikiSearch(title);
+jobDescription(title);
+
 
 // Sends user to retake the quiz
 $("#retake-btn").click(function() {
