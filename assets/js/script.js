@@ -85,19 +85,24 @@ function wikiSearch(search) {
 var nameLocation = document.querySelector('#name-location');
 
 function jobDescription() {
-  nameLocation.innerHTML=""
-  var titleInsert= document.createElement('h3')
-  titleInsert.textContent =('Chosen Role')
-  
-  card.setAttribute("class", "card")
-  nameLocation.appendChild(card)
-  card.append(titleInsert)
+  var jobName;
+  if (title = "Back%20End%20Developer") {
+    jobName = "Back End Developer";
+  } else if (title = "Game%20Developer") {
+    jobName = "Game Developer";
+  } else if (title = "Front%20End%20Developer") {
+    jobName = "Front End Developer";
+  } else {
+    jobName = title;
+  }
+  nameLocation.innerHTML = jobName;
+  var titleInsert= document.createElement('h3');
 }
 
 // Calls the getJobListing(), wikiSearch(), and jobDescription() method to fetch data and show data on the results page
 getJobListing(title);
 wikiSearch(title);
-jobDescription(title);
+jobDescription();
 
 
 // Sends user to retake the quiz
