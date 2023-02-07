@@ -34,7 +34,7 @@ To clone and run this application, you'll need VS installed on your computer. Fr
 $ git clone git@github.com:MeyerTalon/Job_Finder.git
 
 # Go into the repository
-$ cd Job_finder
+$ cd Job_Finder
 
 # Install dependencies
 $ npm install

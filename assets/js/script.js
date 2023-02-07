@@ -70,6 +70,7 @@ function wikiSearch(search) {
         for (var i = 1; i <= 5; i++) {
           $("#title" + i).text(pageTitles[i - 1]);
           $("#URL" + i).text(pageURLs[i - 1]);
+          $("#URL" + i).attr("href", pageURLs[i - 1]);
         }
       })
     }
