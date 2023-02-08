@@ -14,6 +14,7 @@
   <a href="#how-to-use">How To Use</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
+  <a href="https://meyertalon.github.io/Job_Finder/">Deployed Website</a>
 </p>
 
 ![image](https://user-images.githubusercontent.com/118871515/216512143-67c3f736-6c38-4ebe-a338-2939ffe2afb6.png)
