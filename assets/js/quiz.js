@@ -130,8 +130,8 @@ startButton.addEventListener('click', () => {
 
 
     // hide starting info
-    quizName.style.display = "none";
-    quizRules.style.display = "none";
+    // quizName.style.display = "none";
+    // quizRules.style.display = "none";
 
 });
 
@@ -177,13 +177,11 @@ function showNextQuestion() {
         }
         chosenRole = roles[chosenRoleIndex];
         localStorage.setItem('Chosen Role', chosenRole);
-        console.log("Chosen role: " + chosenRole);
         document.location.replace('./results.html');
         return;
     }
 
     let currentQuestion = questions[questionIndex];
-    console.log({ currentQuestion });
     questionEl.textContent = currentQuestion.question;
     option1El.textContent = currentQuestion.options[0];
     option2El.textContent = currentQuestion.options[1];
@@ -193,14 +191,6 @@ function showNextQuestion() {
 
 
 function submitAnswer(answer) {
-    console.log({ answer });
-    // let currentQuestion = questions[questionIndex];
-    // if (answer !== currentQuestion.answer) {
-    //     console.log("Incorrect!");
-    //     endTime= new Date (endTime.getTime() - 10000)
-
-    // }
-
     showNextQuestion();
 
 }
