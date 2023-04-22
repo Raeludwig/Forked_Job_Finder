@@ -5,6 +5,8 @@ var timeInterval;
 const quizName = document.getElementById('quizName');
 const quizRules = document.getElementById('quizRules');
 const start=document.getElementById('start-button')
+
+
 // Tally section
 var tally = [0, 0, 0, 0];
 var roles = ['Cybersecurity', 'Back%20End%20Developer', 'Game%20Developer', 'Front%20End%20Developer'];
