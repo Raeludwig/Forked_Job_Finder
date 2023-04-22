@@ -129,12 +129,6 @@ startButton.addEventListener('click', () => {
     option2El.style.display = "";
     option3El.style.display = "";
     option4El.style.display = "";
-
-
-    // hide starting info
-    // quizName.style.display = "none";
-    // quizRules.style.display = "none";
-
 });
 
 
