@@ -20,9 +20,6 @@ function getJobListing (title) {
     .then(function(response) {
       if (response.ok) {
           response.json().then(function(data) {
-            console.log(data);
-
-           
 
             for (i = 0; i < 10; i++) {
                // Variable to push information into html
@@ -54,7 +51,7 @@ function wikiSearch(search) {
     if (response.ok) {
       return response.json()
       .then(function(data) {
-        console.log(data);
+        
         var pageURLs = [];
         var pageTitles = [];
         for (var i = 0; i < 5; i++) {
@@ -62,9 +59,6 @@ function wikiSearch(search) {
           pageTitles[i] = data.query.search[i].title;
 
         }
-        console.log(pageURLs);
-        console.log(pageTitles);
-        console.log(data)
 
         // Set data into page UI
         for (var i = 1; i <= 5; i++) {
@@ -83,8 +77,9 @@ function wikiSearch(search) {
 var nameLocation = document.querySelector('#name-location');
 
 function jobDescription() {
+  const description = document.querySelector("#description");
   var jobName;
-  console.log(title)
+ 
   if (title === "Back%20End%20Developer") {
     jobName = "Back End Developer";
   } else if (title === "Game%20Developer") {
@@ -94,10 +89,12 @@ function jobDescription() {
   } else {
     jobName = title;
   }
-  console.log("jobName: " + jobName)
-  nameLocation.innerHTML = jobName;
-  var titleInsert= document.createElement('h3');
+
+  if (description) { // check if the element exists
+    description.innerHTML = jobName; // set the innerHTML property
+  }
 }
+
 
 // Calls the getJobListing(), wikiSearch(), and jobDescription() method to fetch data and show data on the results page
 getJobListing(title);
